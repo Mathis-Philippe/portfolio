@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Questrial';
+    src: url(font/Questrial-Regular.ttf);
+}
+
+.grad {
+    background-image: linear-gradient(#2581C4, #FFFFFF);
+    background-repeat: no-repeat;
+    height: 100vh;
+}   
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+li {
+    display: inline;
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    padding: 20px;
+    font-family: 'Questrial';
+    font-size: 18px;
+}
+ 
+
+
+#LogoAccueil{
+    height: 3em;
+    width: auto;
+}
+
+#vide{
+    width: 30vw;
+}
+
+#menuNav{
+    width: 30vw;
+}
+
+#LogoHeader{
+    justify-self: center;
+}
+
+.Menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#PhotoMathis {
+    height: 80%;
+    width: auto;
+}

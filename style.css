@@ -2,6 +2,10 @@
     font-family: 'Questrial';
     src: url(font/Questrial-Regular.ttf);
 }
+@font-face {
+    font-family: 'Bimbo';
+    src: url(font/Bimbo-Trial.ttf);
+}
 
 .grad {
     background-image: linear-gradient(#2581C4, #FFFFFF);
@@ -55,7 +59,14 @@ a {
     justify-content: space-between;
 }
 
-#PhotoMathis {
-    height: 80%;
-    width: auto;
+.accmenu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Textaccmenu {
+    color: #FFFFFF;
+    font-family: 'Questrial';
+    font-size: 10em;
 }

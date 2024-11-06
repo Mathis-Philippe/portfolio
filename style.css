@@ -46,6 +46,7 @@ body {
 
 .logo_navbar {
     width: 5%;
+    flex-shrink: 0;
 }
 
 .menu {
@@ -75,10 +76,10 @@ body {
 
 
 .menu_navbar {
-    text-align: center;
     display: flex;
-    flex-direction: row;
     gap: 40px;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .First_Title {
@@ -340,6 +341,26 @@ body {
     flex-direction: row-reverse;
 }
 
+.projet_carte img, .projet_carte2 img {
+    transition: transform 0.3s ease;
+}
+
+.projet_carte:hover img, .projet_carte2:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .image_projet {
     width: 100%;
 }
@@ -397,7 +418,7 @@ body {
 }
 
 .form-container button:active {
-    scale: 0.95;
+    transform: scale(0.95);
 }
 
 .form-container .form {
@@ -505,13 +526,13 @@ body {
     .Title1 {
         color: #FFFFFF;
         font-family: "Questrial";
-        font-size: 50px;
+        font-size: 75px;
     }
     
     .Title2 {
         color: #FFFFFF;
         font-family: "Questrial";
-        font-size: 50px;
+        font-size: 75px;
     }
     .Title {
         color: #2581C4;
@@ -536,7 +557,7 @@ body {
 
     .img_carte {
         width: 40%;
-        height: 250px;
+        height: auto;
         border-radius: 10px;
         box-shadow: 10px 10px 10px rgb(191, 191, 191);
         margin: 0 auto;
@@ -565,11 +586,11 @@ body {
         text-align: center;
     }
     .espace {
-        height: 100px;
+        height: 50px;
     }
     
     .espace2 {
-        height: 150px;
+        height: 525px;
     }
     .tiles {
         font-size: 0;
@@ -641,5 +662,57 @@ body {
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+}
+
+
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+}
+
+/* Menu mobile caché par défaut */
+.menu_navbar_mobile {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #4C97CF;
+    padding-top: 60px;
+    box-shadow: -2px 0px 8px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.menu_navbar_mobile a {
+    color: #FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Questrial";
+    padding: 10px 0;
+}
+
+/* Apparence du menu burger et du menu mobile pour les écrans de moins de 768px */
+@media only screen and (max-width: 768px) {
+    .menu_navbar {
+        display: none; /* Cacher le menu de navigation principal */
+    }
+
+    .burger-menu {
+        display: flex; /* Afficher le bouton burger */
     }
 }

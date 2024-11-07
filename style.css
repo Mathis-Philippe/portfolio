@@ -27,6 +27,9 @@ body {
     background-image: url(img/1x/bg_portfolio-100.jpg);
     width: 100%;
     margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
 }
 
 .travaux{
@@ -121,7 +124,7 @@ body {
 }
 
 .Title {
-    color: #2581C4;
+    color: #FFFFFF;
     font-family: "Questrial";
     font-size: 100px;
     text-align: center;
@@ -150,7 +153,7 @@ body {
 .img_carte {
     width: 20%;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgb(191, 191, 191);
+    box-shadow: 10px 10px 10px rgb(223, 223, 223);
 }
 
 .Text_ID {
@@ -177,16 +180,15 @@ body {
 }
 
 .espace {
-    height: 200px;
+    margin: 20%;
 }
 
 .espace2 {
-    height: 300px;
+    margin: 30%;
 }
 
 .tiles {
     font-size: 0;
-    position: absolute;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -361,20 +363,41 @@ body {
     transform: translateY(0);
 }
 
-.image_projet {
-    width: 100%;
+.projects {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 50px 0;
 }
 
-.image_projet2 {
-    width: 100%;
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
 }
-
-.projet_carte a {
-    width: 100%;
+.project-card {
+    background-color: #FFFFFF;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.projet_carte2 a {
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.project-image {
     width: 100%;
+    height: auto;
+}
+.project-info {
+    padding: 20px;
+    color: #4C97CF;
+    font-size: 18px;
+    font-family: "Questrial";
+    text-align: left;
 }
 
 .div_text {
@@ -497,6 +520,13 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        background-image: url(img/1x/bg_portfolio-100.jpg);
+        width: 100%;
+        margin: 0;
+        background-size: cover;
+        background-attachment: scroll;
+    }
     .logo_navbar {
         width: 13%;
         padding-right: 10px;
@@ -584,9 +614,9 @@ body {
         font-family: "Questrial";
         font-size: 50px;
         text-align: center;
-    }
+    }   
     .espace {
-        height: 50px;
+        margin: 60%;
     }
     
     .espace2 {
@@ -594,7 +624,6 @@ body {
     }
     .tiles {
         font-size: 0;
-        position: absolute;
         display: flex;
         flex-direction: column;
     }
@@ -605,7 +634,6 @@ body {
         width: 100%;
     }
     .Footer {
-        padding-top: 400px;
         background-color: #4C97CF;
         text-align: center;
     }
@@ -706,13 +734,39 @@ body {
     padding: 10px 0;
 }
 
-/* Apparence du menu burger et du menu mobile pour les écrans de moins de 768px */
 @media only screen and (max-width: 768px) {
     .menu_navbar {
-        display: none; /* Cacher le menu de navigation principal */
+        display: none;
     }
 
     .burger-menu {
-        display: flex; /* Afficher le bouton burger */
+        display: flex;
     }
 }
+
+.section-title, .project-description, .subsection-title, .project-features, .project-results {
+    color: #fff;
+    font-family: "Questrial";
+}
+
+.project-content {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    z-index: 0;
+}
+

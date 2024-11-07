@@ -521,7 +521,6 @@ body {
 
 @media only screen and (max-width: 768px) {
     body {
-        background-image: url(img/1x/bg_portfolio-100.jpg);
         width: 100%;
         margin: 0;
         background-size: cover;
@@ -767,6 +766,60 @@ body {
     width: 100%;
     max-width: 500px;
     height: auto;
-    z-index: 0;
+    z-index: -1;
 }
 
+.bio-section, .skills-section, .values-section, .statistics-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #4C97CF;
+    font-family: "Questrial";
+}
+
+.bio-section h2, .skills-section h2, .values-section h2, .statistics-section h2 {
+    color: #2581C4;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 200px;
+    text-align: center;
+}
+
+.values-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.values-section li {
+    margin-bottom: 10px;
+}
+
+.statistics {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.statistics .stat-item h3 {
+    font-size: 40px;
+    color: #2581C4;
+}
+
+.statistics .stat-item p {
+    font-size: 18px;
+    color: #717171;
+}
